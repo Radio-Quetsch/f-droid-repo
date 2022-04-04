@@ -1,8 +1,9 @@
 {
   "/etc/issue.net": "Debian GNU/Linux 9",
   "commandLine": [
-    "/usr/local/bin/fdroid update"
+    "/usr/local/bin/fdroid update",
+    "-c"
   ],
-  "startTimestamp": 1649080183000,
+  "startTimestamp": 1649084204000,
   "subcommand": "update"
 }
