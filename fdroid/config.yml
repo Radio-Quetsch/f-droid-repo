@@ -113,7 +113,7 @@ make_current_version_link: true
 # The key (from the keystore defined below) to be used for signing the
 # repository itself. This is the same name you would give to keytool or
 # jarsigner using -alias. (Not needed in an unsigned repository).
-repo_keyalias: ${REPO_KEYALIAS}
+#repo_keyalias: ${REPO_KEYALIAS}
 
 
 
@@ -131,7 +131,7 @@ repo_keyalias: ${REPO_KEYALIAS}
 # "NONE" (i.e. keystore: "NONE"). That makes Java find the keystore on the
 # smartcard based on 'smartcardoptions' below.
 #keystore: quetsch.keystore
-keystore: ${KEYSTORE_FILENAME}
+#keystore: ${KEYSTORE_FILENAME}
 
 # You should not need to change these at all, unless you have a very
 # customized setup for using smartcards in Java with keytool/jarsigner
@@ -144,19 +144,19 @@ keystore: ${KEYSTORE_FILENAME}
 # different than the keypass below, it can be OK to store the password in this
 # file for real use. But in general, sensitive passwords should not be stored
 # in text files!
-keystorepass: ${KEYSTORE_PASS}
+#keystorepass: ${KEYSTORE_PASS}
 
 
 
 # The password for keys - the same is used for each auto-generated key as well
 # as for the repository key. You should not normally store this password in a
 # file since it is a sensitive password.
-keypass: ${KEYPASS}
+#keypass: ${KEYPASS}
 
 
 # The distinguished name used for all keys.
 #keydname: CN=b3f176c07b78, OU=F-Droid
-keydname: ${KEYDNAME}
+#keydname: ${KEYDNAME}
 
 
 
@@ -243,7 +243,7 @@ keydname: ${KEYDNAME}
 # with serverwebroot.
 #
 # local_copy_dir: /media/MyUSBThumbDrive/fdroid
-local_copy_dir: /tmp/fdroid
+#local_copy_dir: /tmp/fdroid
 
 
 # If you are using local_copy_dir on an offline build/signing server, once the
@@ -371,4 +371,4 @@ local_copy_dir: /tmp/fdroid
 # lint_licenses:
 #   - Custom-License-A
 #   - Another-License
-lint_licenses:
+#lint_licenses:

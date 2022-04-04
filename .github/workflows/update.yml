@@ -22,31 +22,25 @@ jobs:
       - name: Init Repository Secrets
         run: |
           echo "$KEYSTORE_FILE" | base64 --decode > fdroid/keystore.p12
-      - name: Update F-Droid Repo
-        run: |
-          docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo \
-          -e $KEYDNAME \
-          -e $KEYPASS \
-          -e $KEYSTORE_FILE \
-          -e $KEYSTORE_FILENAME \
-          -e $KEYSTORE_PASS \
-          -e $REPO_KEYALIAS \ 
-          registry.gitlab.com/fdroid/docker-executable-fdroidserver:master rewritemeta
-          docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo \
-          -e $KEYDNAME \
-          -e $KEYPASS \
-          -e $KEYSTORE_FILE \
-          -e $KEYSTORE_FILENAME \
-          -e $KEYSTORE_PASS \
-          -e $REPO_KEYALIAS \ 
-          registry.gitlab.com/fdroid/docker-executable-fdroidserver:master update --create-metadata
+          cat >> fdroid/config.yml<< EOF
+          keydname: "$KEYDNAME" 
+          keypass: "$KEYPASS"
+          keystore: "$KEYSTORE_FILENAME"
+          keystorepass: "$KEYSTORE_PASS"
+          repo_keyalias: "$REPO_KEYALIAS"
+          EOF
         env:
+          KEYSTORE_FILE: ${{ secrets.KEYSTORE_FILE }}
           KEYDNAME: ${{ secrets.KEYDNAME }}
           KEYPASS: ${{ secrets.KEYPASS }}
           KEYSTORE_FILE: ${{ secrets.KEYSTORE_FILE }}
           KEYSTORE_FILENAME: ${{ secrets.KEYSTORE_FILENAME }}
           KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS}}
           REPO_KEYALIAS: ${{ secrets.REPO_KEYALIAS }} 
+      - name: Update F-Droid Repo
+        run: |
+          docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo registry.gitlab.com/fdroid/docker-executable-fdroidserver:master rewritemeta
+          docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo registry.gitlab.com/fdroid/docker-executable-fdroidserver:master update --create-metadata
       # - name: Build the directory for github pages
       #   run: |
       #     mkdir -p pages_output
