@@ -1,3 +1,4 @@
+---
 # see https://gitlab.com/fdroid/fdroidserver/blob/2.1/examples/config.yml
 
 sdk_path: $ANDROID_HOME
@@ -18,3 +19,7 @@ archive_description: >-
   https://f-droid.radio-quetsch.eu
 
 archive_older: 1
+  
+# Secrets : 
+
+  
