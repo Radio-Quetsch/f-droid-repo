@@ -25,7 +25,7 @@ jobs:
           cat >> fdroid/config.yml<< EOF
           keydname: "$KEYDNAME" 
           keypass: "$KEYPASS"
-          keystore: "$KEYSTORE_FILENAME"
+          keystore: keystore.p12
           keystorepass: "$KEYSTORE_PASS"
           repo_keyalias: "$REPO_KEYALIAS"
           EOF
