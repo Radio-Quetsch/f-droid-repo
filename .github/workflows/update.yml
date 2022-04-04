@@ -29,6 +29,7 @@ jobs:
           keystorepass: "$KEYSTORE_PASS"
           repo_keyalias: "$REPO_KEYALIAS"
           EOF
+          chmod 0600 fdroid/config.yml
         env:
           KEYDNAME: ${{ secrets.KEYDNAME }}
           KEYPASS: ${{ secrets.KEYPASS }}
