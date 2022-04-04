@@ -26,13 +26,11 @@ jobs:
       - name: Init Repository Secrets
         run: |
           echo "$KEYSTORE_FILE" | base64 --decode > fdroid/keystore.p12
-          cat >> fdroid/config.yml<< EOF
-          keydname: $KEYDNAME 
-          keypass: $KEYPASS
-          keystore: $KEYSTORE_FILENAME
-          keystorepass: $KEYSTORE_PASS
-          repo_keyalias: $REPO_KEYALIAS
-          EOF
+          echo "keydname: $KEYDNAME" >> fdroid/config.yml
+          echo "keypass: $KEYPASS" >> fdroid/config.yml
+          echo "keystore: $KEYSTORE_FILENAME" >> fdroid/config.yml
+          echo "keystorepass: $KEYSTORE_PASS" >> fdroid/config.yml
+          echo "repo_keyalias: $REPO_KEYALIAS" >> fdroid/config.yml
           chmod 0600 fdroid/config.yml
           chmod 0600 fdroid/keystore.p12
         env:
