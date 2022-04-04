@@ -31,12 +31,13 @@ jobs:
           EOF
           chmod 0600 fdroid/config.yml
           chmod 0600 fdroid/keystore.p12
+          cat fdroid/config.yml
         env:
           KEYDNAME: ${{ secrets.KEYDNAME }}
           KEYPASS: ${{ secrets.KEYPASS }}
           KEYSTORE_FILE: ${{ secrets.KEYSTORE_FILE }}
           KEYSTORE_FILENAME: ${{ secrets.KEYSTORE_FILENAME }}
-          KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS}}
+          KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS }}
           REPO_KEYALIAS: ${{ secrets.REPO_KEYALIAS }} 
       - name: Update F-Droid Repo
         run: |
