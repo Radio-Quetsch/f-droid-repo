@@ -46,8 +46,8 @@ jobs:
       - name: Build the directory for github pages
         run: |
            mkdir -p pages_output
-           cp -r fdroid/repo pages_output/
-           cp -r fdroid/archive pages_output/archive
+           cp -r fdroid/repo pages_output/repo
+           cp -r fdroid/archive pages_output/repo/archive
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
