@@ -30,7 +30,6 @@ jobs:
           repo_keyalias: "$REPO_KEYALIAS"
           EOF
         env:
-          KEYSTORE_FILE: ${{ secrets.KEYSTORE_FILE }}
           KEYDNAME: ${{ secrets.KEYDNAME }}
           KEYPASS: ${{ secrets.KEYPASS }}
           KEYSTORE_FILE: ${{ secrets.KEYSTORE_FILE }}
