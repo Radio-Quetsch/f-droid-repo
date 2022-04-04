@@ -53,7 +53,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: pages_output/
+          build_dir: pages_output/repo/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #- run: cd fdroid && git add . && git commit -m "Update from $GITHUB_SHA" && git push origin fdroid
