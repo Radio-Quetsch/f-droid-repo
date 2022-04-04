@@ -10,7 +10,7 @@ Summary: Ecoutez Radio Quetsch
 
 MaintainerNotes: Please report issues by mail jee[at]radio-quetsch.eu
 
-AutoUpdateMode: None
-UpdateCheckMode: None
-CurrentVersion: 1.0.2
-CurrentVersionCode: 102
+AutoUpdateMode: Version
+UpdateCheckMode: Tag
+CurrentVersion: 1.0.3
+CurrentVersionCode: 20220403
