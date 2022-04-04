@@ -40,7 +40,7 @@ jobs:
           REPO_KEYALIAS: ${{ secrets.REPO_KEYALIAS }} 
       - name: Update F-Droid Repo
         run: |
-          docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo registry.gitlab.com/fdroid/docker-executable-fdroidserver:master rewritemeta
+          #docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo registry.gitlab.com/fdroid/docker-executable-fdroidserver:master rewritemeta
           docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo registry.gitlab.com/fdroid/docker-executable-fdroidserver:master update --create-metadata
       # - name: Build the directory for github pages
       #   run: |

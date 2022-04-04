@@ -122,7 +122,7 @@ make_current_version_link: true
 # will be retrieved from the keystore when needed. However, specifying it
 # manually can allow some processing to take place without access to the
 # keystore.
-repo_pubkey: pubkey.pem
+#repo_pubkey: pubkey.pem
 
 # The keystore to use for release keys when building. This needs to be
 # somewhere safe and secure, and backed up!  The best way to manage these
