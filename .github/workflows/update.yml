@@ -46,6 +46,7 @@ jobs:
       - name: Build the directory for github pages
         run: |
            mkdir -p pages_output
+           echo "f-droid.radio-quetsch.eu" > pages_output/CNAME
            cp -r root/index.html pages_output/index.html
            cp -r root/index.css pages_output/index.css
            cp -r root/assets pages_output/assets
@@ -59,4 +60,5 @@ jobs:
           build_dir: pages_output/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       #- run: cd fdroid && git add . && git commit -m "Update from $GITHUB_SHA" && git push origin fdroid
