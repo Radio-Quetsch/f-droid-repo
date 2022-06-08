@@ -4,7 +4,7 @@
 sdk_path: $ANDROID_HOME
 
 
-repo_url: https://radio-quetsch.github.io/f-droid-repo/
+repo_url: https://radio-quetsch.github.io/f-droid-repo/repo
 repo_name: Radio Quetsch F-Droid Repo
 repo_description: >-
   Bienvenue sur le dépot F-Droid de Radio Quetsch.
