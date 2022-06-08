@@ -46,7 +46,7 @@ jobs:
       - name: Checkout App Page 
         uses: actions/checkout@v3
         with:
-          repository: git@github.com:radio-quetsch/app.radio-quetsch.eu.git
+          repository: radio-quetsch/app.radio-quetsch.eu
           ssh-key: ${{ secrets.PRIVATE_SSH_KEY }}
           #token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
           path: appPage
