@@ -4,19 +4,19 @@
 sdk_path: $ANDROID_HOME
 
 
-repo_url: https://radio-quetsch.github.io/f-droid-repo/repo
+repo_url: https://f-droid.radio-quetsch.eu/repo
 repo_name: Radio Quetsch F-Droid Repo
 repo_description: >-
   Bienvenue sur le dépot F-Droid de Radio Quetsch.
   Les versions plus anciennes sont disponnibles dans le depot archive.
-  https://radio-quetsch.eu.github.io/f-droid-repo/archive
+  https://f-droid.radio-quetsch.eu/archive
   
-archive_url: https://radio-quetsch.github.io/f-droid-repo/archive
+archive_url: https://f-droid.radio-quetsch.eu/archive
 archive_name: Radio Quetsch F-Droid Archive Repo
 archive_description: >-
   Bienvenue sur le dépot Archive F-Droid de Radio Quetsch.
   Ce depot contient les anciennes versions, les versions plus récentes sont disponnibles dans le dépot générale. 
-  https://radio-quetsch.github.io/f-droid-repo
+  https://f-droid.radio-quetsch.eu/repo
 
 archive_older: 3
   
