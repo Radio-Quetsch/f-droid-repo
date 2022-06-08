@@ -43,19 +43,12 @@ jobs:
       - name: Update F-Droid Repo
         run: |
           docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo registry.gitlab.com/fdroid/docker-executable-fdroidserver:master update --create-metadata
-      - name: Checkout App Page 
-        uses: actions/checkout@v3
-        with:
-          repository: radio-quetsch/app.radio-quetsch.eu
-          ssh-key: ${{ secrets.PRIVATE_SSH_KEY }}
-          #token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
-          path: appPage
       - name: Build the directory for github pages
         run: |
            mkdir -p pages_output
-           cp -r appPage/index.html pages_output/index.html
-           cp -r appPage/style.css pages_output/style.css
-           cp -r appPage/assets pages_output/assets
+           cp -r root/index.html pages_output/index.html
+           cp -r root/index.css pages_output/index.css
+           cp -r root/assets pages_output/assets
            cp -r fdroid/repo pages_output/repo
            cp -r fdroid/archive pages_output/archive
       - name: Deploy to GitHub Pages
