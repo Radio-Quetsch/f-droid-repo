@@ -63,7 +63,9 @@ jobs:
            cp -r root/index.css pages_output/index.css
            cp -r root/assets pages_output/assets
            cp -r fdroid/repo pages_output/repo
-           cp -r fdroid/archive pages_output/archive
+           if [ -d fdroid/archive ]; then
+            cp -r fdroid/archive pages_output/archive
+           fi
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v3
