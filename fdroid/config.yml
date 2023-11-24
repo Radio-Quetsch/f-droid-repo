@@ -7,7 +7,9 @@ repo_url: https://f-droid.radio-quetsch.eu/repo
 repo_name: Radio Quetsch F-Droid Repo
 repo_description: >-
   Bienvenue sur le dépot F-Droid de Radio Quetsch.
-  
+  Les versions plus anciennes sont disponnibles dans le depot archive.
+  https://f-droid.radio-quetsch.eu/archive
+
 archive_url: https://f-droid.radio-quetsch.eu/archive
 archive_name: Radio Quetsch F-Droid Archive Repo
 archive_description: >-
