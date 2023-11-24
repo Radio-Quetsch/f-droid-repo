@@ -4,9 +4,13 @@ fdroid/keystore.p12
 # Ignore tmp
 fdroid/tmp/*
 
-
 # Ignore all files in ./fdroid/repo
 fdroid/repo/*
+fdroid/archive
 
 # Include APK files in ./fdroid/repo
 !fdroid/repo/*.apk
+
+# Ignore files used for local build
+.env
+fdroid/local-config.yml
