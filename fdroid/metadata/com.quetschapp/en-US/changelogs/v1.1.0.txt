@@ -1,0 +1,24 @@
+1.1.0 (2023-11-24)
+
+Features
+- add conventional-changelog (621cb2b)
+
+Documentation
+- add building instructions (6178665)
+- update readme building link (62cb1f3)
+
+Styles
+- add assets (1b74655)
+- update android icons (f1583ec)
+
+Chores
+- big update to react-native 72.7 and RNTP v4 (adc6114)
+
+Code Refactoring
+- Update App file (721bd16)
+- Update Components (244405c)
+- update service (a5133e5)
+- utils: add scripts (2fe1bd4)
+
+Build System
+- config android build (a66a3de)
