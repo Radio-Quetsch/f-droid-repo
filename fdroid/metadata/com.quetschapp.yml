@@ -1,16 +1,16 @@
 Categories:
   - Multimedia
-License: ©RTZ.DEV
-AuthorName: rtz.dev
+License: ©ARTZ.DEV
+AuthorName: artz.dev
 WebSite: https://app.radio-quetsch.eu
 Donate: https://dons.radio-quetsch.eu
 
 Name: QuetschApp
-Summary: Ecoutez Radio Quetsch
+Summary: Écoutez Radio Quetsch
 
 MaintainerNotes: Please report issues by mail jee[at]radio-quetsch.eu
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.3
-CurrentVersionCode: 20220403
+# CurrentVersion: 1.0.3
+# CurrentVersionCode: 20220403
