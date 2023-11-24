@@ -1,4 +1,4 @@
-name: Deploy
+name: Build Docker Image
 
 concurrency:
   group: build-${{ github.ref }}
