@@ -1,12 +1,12 @@
 # Ignore keystore
-./fdroid/keystore.p12
+fdroid/keystore.p12
 
 # Ignore tmp
-./fdroid/tmp/*
+fdroid/tmp/*
 
 
 # Ignore all files in ./fdroid/repo
-./fdroid/repo/*
+fdroid/repo/*
 
 # Include APK files in ./fdroid/repo
-!./fdroid/repo/*.apk
+!fdroid/repo/*.apk
