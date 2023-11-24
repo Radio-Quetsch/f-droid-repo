@@ -29,7 +29,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
         uses: actions/checkout@v3
-      
       - name: Init Repository Secrets
         run: |
           echo "$KEYSTORE_FILE" | base64 --decode > fdroid/keystore.p12
@@ -47,6 +46,12 @@ jobs:
           KEYSTORE_FILENAME: ${{ secrets.KEYSTORE_FILENAME }}
           KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS }}
           REPO_KEYALIAS: ${{ secrets.REPO_KEYALIAS }} 
+      - name: Login into GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Update F-Droid Repo
         run: |
           docker run --rm -u $UID -v $GITHUB_WORKSPACE/fdroid:/repo ghcr.io/radio-quetsch/fdroidserver:main update --create-metadata
