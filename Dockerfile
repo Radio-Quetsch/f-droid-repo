@@ -11,7 +11,5 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/*
     
 WORKDIR /repo
-
-
 ENTRYPOINT ["fdroid"]
 CMD ["--help"]
