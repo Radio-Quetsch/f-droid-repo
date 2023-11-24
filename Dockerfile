@@ -11,5 +11,7 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/*
     
 WORKDIR /repo
-ENTRYPOINT ['fdroidserver']
-CMD ['--help']
+
+
+ENTRYPOINT ["fdroid"]
+CMD ["--help"]
