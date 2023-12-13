@@ -1,0 +1,4 @@
+* performance: update to React-Native 0.73
+* feature: add default compact cover
+* feature: add Quetsch SVG Button and Icons
+
